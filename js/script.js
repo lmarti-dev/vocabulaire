@@ -137,6 +137,7 @@ function filter_topics (value) {
 function filter_voc (value) {
   let re = new RegExp(value, 'i')
   let words = document.getElementsByClassName('mot')
+  unhide_voc_items()
 
   for (let word of words) {
     if (!re.test(word.getElementsByTagName('a')[0].innerHTML)) {
