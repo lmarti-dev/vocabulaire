@@ -42,7 +42,7 @@ function reset_search_value () {
 }
 
 async function pick_voc_list (filename, name) {
-  let __voc = await load_json(`../files/merged/${filename}`)
+  let __voc = await load_json(`./files/merged/${filename}`)
   let voc_title = document.getElementById('voc-title')
   voc_title.innerHTML = `<h1>${name}</h1>`
 
@@ -81,7 +81,7 @@ async function main () {
 
   current_search_value = ''
 
-  TOPICS = await load_json('../files/merged/__manifest.json')
+  TOPICS = await load_json('./files/merged/__manifest.json')
   search = document.getElementById('search-form')
   search.setAttribute('disabled', null)
 
