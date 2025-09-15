@@ -2,6 +2,7 @@ var current_search_value = null
 var current_mode = null
 
 var TOPICS = null
+var WHICH = 'indicateur'
 
 async function load_json (url) {
   return await (await fetch(url, { method: 'GET' })).json()
@@ -15,17 +16,30 @@ function create_voc_list_item (word, desc) {
   item.innerHTML = `<a target='_blank' class='px-2 fw-bold' href='${href}'>${word.toUpperCase()}</a><p class='w-100 flex-grow-1 small px-2 text-secondary'>${desc}</p>`
   return item
 }
-function create_topic_list_item (filename, name) {
+function create_topic_list_item (filename, data) {
+  let name = data[0]
+  let number = data[1]
   let item = document.createElement('a')
+  let cat = document.createElement('p')
   item.setAttribute(
     'class',
-    'list-group-item-action list-group-item d-flex flex-row fs-5'
+    'list-group-item-action list-group-item d-flex flex-row p-3'
   )
-  item.setAttribute('href', '#')
-  item.innerHTML = `${name}`
+
+  cat.setAttribute('class', 'align-self-center fw-semibold my-0 fs-5')
+  item.setAttribute('href', `#`)
+  cat.innerHTML = name.toUpperCase()
   item.addEventListener('click', e => {
     pick_voc_list(filename, name)
   })
+  let n_mots = document.createElement('p')
+  n_mots.setAttribute(
+    'class',
+    'text-body-tertiary small mx-2 align-self-center fw-normal my-0 fs-6'
+  )
+  n_mots.innerHTML = `${number} mots`
+  item.appendChild(cat)
+  item.appendChild(n_mots)
   return item
 }
 
@@ -42,7 +56,7 @@ function reset_search_value () {
 }
 
 async function pick_voc_list (filename, name) {
-  let __voc = await load_json(`./files/merged/${filename}`)
+  let __voc = await load_json(`./files/${WHICH}/merged/${filename}`)
   let voc_title = document.getElementById('voc-title')
   voc_title.innerHTML = `<h1>${name}</h1>`
 
@@ -53,14 +67,14 @@ async function pick_voc_list (filename, name) {
 
   show_voc(__voc)
 
-  let topics = document.getElementById('topic-list')
-  hide(topics)
-
   let voc_title_line = document.getElementById('voc-title-line')
   unhide(voc_title_line)
 
   current_mode = 'voc'
   reset_search_value()
+
+  let topics = document.getElementById('topic-list')
+  hide(topics)
 }
 
 function show_topics (__topics) {
@@ -81,7 +95,7 @@ async function main () {
 
   current_search_value = ''
 
-  TOPICS = await load_json('./files/merged/__manifest.json')
+  TOPICS = await load_json(`./files/${WHICH}/merged/__manifest.json`)
   search = document.getElementById('search-form')
   search.setAttribute('disabled', null)
 
@@ -127,7 +141,7 @@ function rebuild_dict (d, ks) {
 
 function filter_topics (value) {
   let re = new RegExp(value, 'i')
-  let remaining_keys = Object.keys(TOPICS).filter(e => re.test(TOPICS[[e]]))
+  let remaining_keys = Object.keys(TOPICS).filter(e => re.test(TOPICS[[e]][0]))
 
   let remaining_topics = rebuild_dict(TOPICS, remaining_keys)
   show_topics(remaining_topics)
