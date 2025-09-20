@@ -23,6 +23,12 @@
   <body>
     <div class="mx-auto container p-2">
       <div class="mx-auto container p-2" id="content">
+        <div class="mx-auto container p-2 d-flex flex-row flex-wrap mw-50"><p
+            class="align-self-center d-flex mx-2 my-auto">Type de
+            sémantique</p><select
+            name="sem-select" id="sem-select"
+            class="align-self-center d-flex mx-2 my-auto mw-50 form-select w-auto mw-50"
+            aria-label="Select a semantic category"></select></div>
         <input
           id="search-form"
           type="search"
@@ -53,8 +59,13 @@
             de la langue française</a>
           publié par Émile Littré entre 1863 et 1873.
         </p>
-        <p>Parfois, les définitions contiennent un explicatif sémantique, par
-          exemple "Terme d'anatomie". J'ai réuni par sujet sur cette page tous
+        <p>Parfois, les définitions contiennent deux types d'explicatif
+          sémantique. Le premier spécifie le domaine, par
+          exemple "Terme d'anatomie". Le second type indique le registre, comme
+          par exemple "Terme très familier". Pour respecter la notation
+          originale, les deux catégories se nomment "domaine" et "indicateur",
+          respectivement.
+          J'ai réuni par sujet sur cette page tous
           les mots qui
           contenaient ce genre de précision. Cependant,
           ces explicatifs n'étaient pas tout à fait cohérents ou rigoureusement
@@ -90,7 +101,7 @@
       </div>
       <button
         type="button"
-        class="btn btn-outline-primary relative-bottom btn-sm p-2 w-10 mx-auto m-2"
+        class="btn btn-outline-primary relative-bottom btn-sm p-2"
         id="a-propos-btn">
         À propos
       </button>

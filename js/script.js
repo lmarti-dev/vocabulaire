@@ -2,7 +2,9 @@ var current_search_value = null
 var current_mode = null
 
 var TOPICS = null
-var WHICH = 'indicateur'
+
+var SEM_OPTIONS = ['indicateur', 'domaine']
+var WHICH = SEM_OPTIONS[0]
 
 async function load_json (url) {
   return await (await fetch(url, { method: 'GET' })).json()
@@ -35,7 +37,7 @@ function create_topic_list_item (filename, data) {
   let n_mots = document.createElement('p')
   n_mots.setAttribute(
     'class',
-    'text-body-tertiary small mx-2 align-self-center fw-normal my-0 fs-6'
+    'text-body-tertiary small mx-2   fw-normal my-0 fs-6'
   )
   n_mots.innerHTML = `${number} mots`
   item.appendChild(cat)
@@ -89,7 +91,7 @@ function show_topics (__topics) {
   current_mode = 'topics'
 }
 
-async function main () {
+async function load_and_show_list () {
   let voc_title_line = document.getElementById('voc-title-line')
   hide(voc_title_line)
 
@@ -240,8 +242,37 @@ function set_apropos_btn () {
   })
 }
 
-document.addEventListener('DOMContentLoaded', event => {
-  main()
+function setup_select () {
+  var sel = document.getElementById('sem-select')
+  for (let ii = 0; ii < SEM_OPTIONS.length; ii++) {
+    var opt = document.createElement('option')
+    opt.value = SEM_OPTIONS[ii]
+    opt.innerHTML = SEM_OPTIONS[ii]
+    sel.appendChild(opt)
+  }
+  sel.addEventListener('change', function () {
+    if (WHICH != sel.value) {
+      WHICH = sel.value
+      main()
+    }
+  })
+}
+
+function empty_all () {
+  let topic_list = document.getElementById('topic-list')
+  topic_list.innerHTML = ''
+  let voc_items = document.getElementById('voc-items')
+  voc_items.innerHTML = ''
+}
+
+function main () {
+  empty_all()
+  load_and_show_list()
   set_apropos_btn()
   set_back_btn()
+}
+
+document.addEventListener('DOMContentLoaded', event => {
+  setup_select()
+  main()
 })
