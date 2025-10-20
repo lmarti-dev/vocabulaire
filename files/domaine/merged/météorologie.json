@@ -2,7 +2,6 @@
     "anthélie": "Apparence lumineuse placée à l'opposite du soleil.",
     "cercle": "Cercle magique, trace circulaire que l'on remarque quelquefois sur l'herbe des prairies et qui est due à un phénomène météorologique.",
     "cirrus": "Nom d'une des trois formes principales présentées par les nuages, et que les marins appellent queue-de-chat. Les cirrus sont formés par un ensemble de filaments analogues à un pinceau délié, à des cheveux crépus, à un réseau.",
-    "cumulo-stratus": "Voy.",
     "cumulus": "Nom des nuages, communs dans les beaux jours d'été, qui ressemblent à des montagnes de neige lorsqu'ils sont à l'horizon.",
     "cyclonal, ale": "Qui appartient au cyclone.",
     "cyclone": "Tempête tournante, c'est-à-dire tempête qui balaye la terre ou la mer en tournant sur elle-même. Les cyclones se font sentir particulièrement dans la mer des Indes.",
@@ -10,12 +9,13 @@
     "hydrométéore": "Météore produit par l'eau à l'état de vapeur, de liquide ou de glace. On dit aussi météore aqueux.",
     "héliocomète": "Phénomène que présente quelquefois le soleil couchant ; il consiste en une bande lumineuse, semblable à la queue d'une comète.",
     "isochimène": "Ligne isochimène, ligne passant par tous les points de la terre qui ont la même température moyenne en hiver.",
-    "isotherme": "Qui est égal en température",
+    "isotherme": "Lignes isothermes, lignes qui passent par tous les lieux du globe où la température moyenne de l'année est la même. L'espace compris entre deux lignes isothermes porte le nom de zone ou bord isotherme.",
     "isothère": "Ligne isothère, ligne passant par tous les points de la terre qui ont la même température moyenne en été.",
     "nimbus": "Nuages pluvieux, d'un gris uniforme, qui se confondent entre eux.",
     "nuelle": "Couches blanches et grises dont se compose un nuage isolé entre lesquelles se forme le grésil, tandis que la grêle se forme entre les groupes de nuages bien distincts et d'un volume considérable.",
     "parhélie ou parélie": "Image du soleil réfléchie dans une nuée ; c'est pour le soleil la même chose que la parasélène, à l'égard de la lune.",
     "stratus": "Nom donné à des nuages disposés en couches, et, principalement, aux bandes nuageuses qui apparaissent à l'horizon, au coucher du soleil.",
     "tempête": "Tempêtes, vents violents qui, après avoir soufflé un certain temps de la même direction, en changent quelquefois plus ou moins brusquement.",
-    "évaporomètre": "Instrument employé pour mesurer la tranche d'eau évaporée chaque jour. Marche de l'évaporomètre au sulfure de carbone, comparée à celle de l'évaporomètre à eau, par C. DECHARME, Angers (Acad. des sc. Comptes rend. t. LXXXI, p. 908)."
+    "évaporomètre": "Instrument employé pour mesurer la tranche d'eau évaporée chaque jour. Marche de l'évaporomètre au sulfure de carbone, comparée à celle de l'évaporomètre à eau, par C. DECHARME, Angers (Acad. des sc. Comptes rend. t. LXXXI, p. 908).",
+    "œil": "Œil-de-bœuf, au pluriel, des œils-de bœuf, petits nuages qui apparaissent soudainement au milieu d'un ciel serein dans les régions chaudes, et qui annoncent d'ordinaire une tempête tournante, un typhon."
 }

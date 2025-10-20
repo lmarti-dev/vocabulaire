@@ -116,8 +116,13 @@ function unhide_voc_items () {
   }
 }
 
+function set_doc_title () {
+  let sem = document.getElementById('sem-select').value
+  document.title = `Vocabulaire par ${sem}`
+}
+
 function reset_topics () {
-  document.title = 'Vocabulaire'
+  set_doc_title()
   let voc_items = document.getElementById('voc-items')
   voc_items.innerHTML = ''
   let voc_title_line = document.getElementById('voc-title-line')
@@ -270,6 +275,7 @@ function main () {
   load_and_show_list()
   set_apropos_btn()
   set_back_btn()
+  set_doc_title()
 }
 
 document.addEventListener('DOMContentLoaded', event => {

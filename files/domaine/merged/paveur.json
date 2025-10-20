@@ -1,11 +1,11 @@
 {
     "assiette": "Pavé mis au sens où il doit être sur le sable. Une assiette de pavés en plein sable.",
-    "couche": "Substance étendue qu'on applique sur une autre pour la couvrir. Revêtir un mur d'une couche de plâtre.",
-    "dresser": "Dresser une volaille, l'arranger de manière qu'on puisse la mettre à la broche. Dresser un plat, le disposer de manière qu'il soit prêt à être servi.",
-    "encaissement": "Enceinte formée par de la charpente. Construire par encaissement.",
+    "couche": "Sable qu'on répand avant ou après un pavage.",
+    "dresser": "Enfoncer le pavé également. Ce pavé n'est pas bien dressé, il le faut mieux unir.",
+    "encaissement": "Déblai de terre que l'on fait avant d'établir une chaussée, et dans lequel on met un lit de sable pour asseoir le pavé.",
     "joint": "L'entre-deux de chaque pavé que l'on remplit de sable ou de mortier. Joint en rive, celui qui est entre chaque pavé de la même rangée. Joint en bout, celui qui est entre chaque rangée.",
     "liaisonner": "Liaisonner des pavés, les disposer d'une manière qui les rend capables de résister aux roues des voitures.",
-    "manier": "Manier les couches de blanc pour dorer, les frotter avec la brosse.",
+    "manier": "Manier, ôter les vieux pavés pour en mettre de neufs à la place.",
     "noue": "Partie de pavé de forme triangulaire au droit d'un angle rentrant, composée de deux revers au milieu desquels est un ruisseau.",
     "pente": "Pente courante et pente latérale : la première suit la longueur de la voie ; la seconde tombe sur sa largeur.",
     "pierre": "Pierre coupée ou biseau, pavé coupé triangulairement pour terminer une rangée posée diagonalement.",
@@ -15,7 +15,7 @@
     "retrousser": "Relever la forme en sable d'une chaussée.",
     "rive": "Se dit des deux faces latérales de chaque pavé lorsqu'il est placé.",
     "ruisseau": "Ruisseau en biseau, celui qui n'a ni caniveaux ni contre-jumelles.",
-    "sceller": "Fixer l'extrémité d'une pièce de bois ou de métal dans un mur, dans la pierre ou dans le marbre, avec du plomb, du plâtre, du mortier, etc. Sceller un balcon. Sceller un crochet.",
+    "sceller": "Mettre du mortier sous et entre les pavés.",
     "ébarber": "Dégrossir les joints ou le parement du pavé préalablement.",
     "écart": "Fragments de grès propres à revêtir les fournils, etc."
 }
